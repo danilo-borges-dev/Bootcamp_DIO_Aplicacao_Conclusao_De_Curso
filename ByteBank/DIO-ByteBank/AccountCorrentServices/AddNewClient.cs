@@ -1,16 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using DataList;
+using DIO_ByteBank.AccountCorrent;
 
 namespace DIO_ByteBank.AccountCorrentServices
 {
-    internal class AddNewClient
+    internal static class AddNewClient
     {
-        public void AddClient(string name, double balance, double credit)
+        public static void AddClient(AccountType type, string name, double balance, double credit)
         {
-
+            AccountList.AddNewClientAccount(type, name, balance, credit);
         }
     }
 }

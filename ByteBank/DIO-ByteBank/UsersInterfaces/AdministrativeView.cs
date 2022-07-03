@@ -10,9 +10,9 @@ namespace DIO_ByteBank.UsersInterfaces
             Console.WriteLine("    Informe a Opção Desejada e Tecle Enter");
 
             Console.WriteLine("\nOpções");
-            Console.WriteLine("  1 -  Listar Contas");
-            Console.WriteLine("  2 -  Inserir nova Conta");
-            Console.WriteLine("  6 -  Cliente Área"); // Volta para a área do cliente
+            Console.WriteLine("  5 -  Listar Contas");
+            Console.WriteLine("  4 -  Inserir nova Conta");
+            Console.WriteLine("  7 -  Cliente Área"); // Volta para a área do cliente
             Console.WriteLine("  L -  Limpas Tela");
             Console.WriteLine("  S - Sair");
             Console.WriteLine("\n\n");

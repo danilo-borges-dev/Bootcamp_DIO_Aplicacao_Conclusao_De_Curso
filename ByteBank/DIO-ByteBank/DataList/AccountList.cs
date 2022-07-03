@@ -7,9 +7,10 @@ namespace DataList
     {
         static List<ClientAccountCurrent> listAccounts = new List<ClientAccountCurrent>();
 
-        public static bool AddNewClientAccount(ClientAccountCurrent client)
+        public static bool AddNewClientAccount(AccountType type, string name, double balance, double credit)
         {
-            listAccounts.Add(client);
+            ClientAccountCurrent newClient = new ClientAccountCurrent(type, name, balance, credit);
+            listAccounts.Add(newClient);
             return true;
         }
     }

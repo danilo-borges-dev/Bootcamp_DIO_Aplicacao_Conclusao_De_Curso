@@ -2,7 +2,7 @@
 
 namespace DIO_ByteBank.AccountCorrent
 {
-    internal static class TransferValueAccountCorrent
+    internal static class TransferValueAccountCurrent
     {
         public static bool TransferValue(ClientAccountCurrent clientRoot, double value, ClientAccountCurrent clientDestiny)
         {

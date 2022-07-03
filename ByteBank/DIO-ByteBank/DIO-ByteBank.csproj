@@ -44,14 +44,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AccountCorrentServices\AddNewClient.cs" />
+    <Compile Include="AccountCorrentServices\AdmLogin.cs" />
     <Compile Include="DataList\AccountList.cs" />
     <Compile Include="AccountCorrentServices\AccountType.cs" />
     <Compile Include="AccountCorrentServices\ClientAccountCurrent.cs" />
-    <Compile Include="AccountCorrentServices\Operation.cs" />
+    <Compile Include="AccountCorrentServices\Operations.cs" />
     <Compile Include="AccountCorrentServices\ToDepositValueInCurrentAccount.cs" />
     <Compile Include="AccountCorrentServices\ToWithDraw.cs" />
-    <Compile Include="AccountCorrentServices\TransferValueAccountCorrent.cs" />
+    <Compile Include="AccountCorrentServices\TransferValueAccountCurrent.cs" />
+    <Compile Include="UsersInterfaces\AdministrativeLoginView.cs" />
     <Compile Include="UsersInterfaces\AdministrativeView.cs" />
+    <Compile Include="UsersInterfaces\ClientList.cs" />
     <Compile Include="UsersInterfaces\InitialInterfaceView.cs" />
     <Compile Include="UsersInterfaces\NewClientAccountView.cs" />
     <Compile Include="Program.cs" />

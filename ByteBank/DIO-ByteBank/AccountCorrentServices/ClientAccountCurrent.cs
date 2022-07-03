@@ -33,7 +33,7 @@
         {
             string msg = $"\nTipo de Conta: {AccountType}" +
                 $"Nome de Cliente: {_name}\n" +
-                $"Código: {_id}\n" +
+                $"Código: {_idClient}\n" +
                 $"Saldo R$ {_balance}\n" +
                 $"Crédito Disponível R$ {_credit}\n";
             return base.ToString();
