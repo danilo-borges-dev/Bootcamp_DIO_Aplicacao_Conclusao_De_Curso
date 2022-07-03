@@ -4,8 +4,11 @@ namespace DIO_ByteBank.AccountCorrent
 {
     internal static class ToDepositValueInCurrentAccount
     {
-        public static  bool ToDepositValueInAccountCurrent(ClientAccountCurrent client, double value)
+        public static  bool ToDepositValueInAccountCurrent(ClientAccountCurrent client)
         {
+            Console.Write("\nInforme o Valor para Saque: ");
+            double value = double.Parse(Console.ReadLine());
+
             if (value > 0)
             {
                 double accountBalance = client.Balance;

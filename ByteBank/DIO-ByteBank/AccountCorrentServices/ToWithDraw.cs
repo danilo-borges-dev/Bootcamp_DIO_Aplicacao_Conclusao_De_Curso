@@ -4,8 +4,11 @@ namespace DIO_ByteBank.AccountCorrent
 {
     internal static class ToWithDraw
     {
-        public static bool ToWithDrawValueInAccountCurrent(ClientAccountCurrent client, double value)
+        public static bool ToWithDrawValueInAccountCurrent(ClientAccountCurrent client)
         {
+            Console.Write("\nInforme o Valor para Saque: ");
+            double value = double.Parse(Console.ReadLine());
+
             if (client.Balance >= value && value > 0)
             {
                 double accountBalance = client.Balance;

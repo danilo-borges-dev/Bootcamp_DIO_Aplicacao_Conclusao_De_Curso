@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using DIO_ByteBank.AccountCorrent;
+using DIO_ByteBank.AccountCorrentServices;
+using System;
 
 namespace DIO_ByteBank.UsersInterfaces
 {
@@ -10,8 +8,9 @@ namespace DIO_ByteBank.UsersInterfaces
     {
         public static void Transfer()
         {
-            Console.WriteLine("\n\n\n   ---   Tranferência da Valor   --- ");
+            ClientAccountCurrent client = LoggedPerson.GetUser();
 
+            Console.WriteLine("\n\n\n   ---   Tranferência da Valor   --- ");
         }
     }
 }

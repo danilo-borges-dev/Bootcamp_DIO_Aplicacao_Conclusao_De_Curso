@@ -22,6 +22,22 @@
             get { return _credit;  }
         }
 
+        public AccountType Account
+        {
+            get
+            {
+                return AccountType;
+            }
+        }
+
+        public int IdSystem
+        {
+            get
+            {
+                return _idClient;
+            }
+        }
+
         public ClientAccountCurrent(AccountType accountType, string name, double balance, double credit)
         {
             AccountType = accountType;

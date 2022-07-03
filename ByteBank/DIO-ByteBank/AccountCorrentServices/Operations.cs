@@ -1,4 +1,5 @@
-﻿using DIO_ByteBank.Interfaces;
+﻿using DIO_ByteBank.AccountCorrentServices;
+using DIO_ByteBank.Interfaces;
 using DIO_ByteBank.UsersInterfaces;
 using System;
 
@@ -6,7 +7,7 @@ namespace DIO_ByteBank.AccountCorrent
 {
     internal static class Operations
     {
-        public static void Accomplish(string option, ClientAccountCurrent client, double value)
+        public static void Accomplish(string option)
         {
             while (option.ToUpper() != "X")
             {
@@ -22,10 +23,10 @@ namespace DIO_ByteBank.AccountCorrent
                         TransferView.Transfer(); // Tranferir valor entre contas
                         break;
                     case "2":
-                        ToWithDraw.ToWithDrawValueInAccountCurrent(client, value);  // Sacar
+                        ToWithDraw.ToWithDrawValueInAccountCurrent(LoggedPerson.GetUser());  // Sacar
                         break;
                     case "3":
-                        ToDepositValueInCurrentAccount.ToDepositValueInAccountCurrent(client, value);  // Depoistar
+                        ToDepositValueInCurrentAccount.ToDepositValueInAccountCurrent(LoggedPerson.GetUser());  // Depoistar
                         break;
                     case "6":
                         AdministrativeLoginView.LoginView();  // Tela de Login de Usuário Adm

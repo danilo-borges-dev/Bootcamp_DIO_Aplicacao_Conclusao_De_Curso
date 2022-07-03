@@ -11,9 +11,11 @@ namespace DIO_ByteBank.UsersInterfaces
                         
             foreach (var item in AccountList.ListAccounts)
             {
-                Console.WriteLine($"Nome do Cliente  : {item.Name}");
-                Console.WriteLine($"Saldo da Conta R$: {item.Balance.ToString("C")}");
-                Console.WriteLine($"Crédito Total R$ : {item.Credit.ToString("C")}\n\n");
+                Console.Write($"#{item.IdSystem} - ");
+                Console.Write($"Tipo de Conta {item.Account}  |  ");
+                Console.Write($"Nome do Cliente  : {item.Name}  |  ");
+                Console.Write($"Saldo da Conta R$: {item.Balance.ToString("C")}  |  ");
+                Console.Write($"Crédito Total R$ : {item.Credit.ToString("C")}\n");
             }
 
             Console.WriteLine("   ---   Listagem de Clientes DIO ByteBank   ---   ");

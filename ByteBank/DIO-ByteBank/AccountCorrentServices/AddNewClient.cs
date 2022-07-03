@@ -7,7 +7,7 @@ namespace DIO_ByteBank.AccountCorrentServices
     {
         public static void AddClient(AccountType type, string name, double balance, double credit)
         {
-            AccountList.AddNewClientAccount(type, name, balance, credit);
+            AccountList.AddNewClientAccount(type, name, balance, credit);            
         }
     }
 }

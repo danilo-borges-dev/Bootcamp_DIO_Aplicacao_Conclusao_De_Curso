@@ -13,7 +13,8 @@ namespace DIO_ByteBank
     {
         static void Main(string[] args)
         {
-            AdministrativeView.Menu();
+            NewClientAccountView.AddNewClientInterfaceView();
+            Operations.Accomplish(InitialInterfaceView.Menu());
         }
     }
 }
