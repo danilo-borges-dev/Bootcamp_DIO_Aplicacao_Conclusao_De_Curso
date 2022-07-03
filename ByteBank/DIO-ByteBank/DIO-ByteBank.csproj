@@ -43,12 +43,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AccountCorrent\AccountType.cs" />
-    <Compile Include="AccountCorrent\ClientAccountCurrent.cs" />
-    <Compile Include="AccountCorrent\ToDepositValueInCurrentAccount.cs" />
-    <Compile Include="AccountCorrent\ToWithDraw.cs" />
-    <Compile Include="AccountCorrent\TransferValueAccountCorrent.cs" />
-    <Compile Include="Interfaces\InitialInterface.cs" />
+    <Compile Include="AccountCorrentServices\AddNewClient.cs" />
+    <Compile Include="DataList\AccountList.cs" />
+    <Compile Include="AccountCorrentServices\AccountType.cs" />
+    <Compile Include="AccountCorrentServices\ClientAccountCurrent.cs" />
+    <Compile Include="AccountCorrentServices\Operation.cs" />
+    <Compile Include="AccountCorrentServices\ToDepositValueInCurrentAccount.cs" />
+    <Compile Include="AccountCorrentServices\ToWithDraw.cs" />
+    <Compile Include="AccountCorrentServices\TransferValueAccountCorrent.cs" />
+    <Compile Include="UsersInterfaces\AdministrativeView.cs" />
+    <Compile Include="UsersInterfaces\InitialInterfaceView.cs" />
+    <Compile Include="UsersInterfaces\NewClientAccountView.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

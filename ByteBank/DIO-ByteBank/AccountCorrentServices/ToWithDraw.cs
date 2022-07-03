@@ -2,9 +2,9 @@
 
 namespace DIO_ByteBank.AccountCorrent
 {
-    internal class ToWithDraw
+    internal static class ToWithDraw
     {
-        public bool ToWithDrawValueInAccountCurrent(ClientAccountCurrent client, double value)
+        public static bool ToWithDrawValueInAccountCurrent(ClientAccountCurrent client, double value)
         {
             if (client.Balance >= value && value > 0)
             {

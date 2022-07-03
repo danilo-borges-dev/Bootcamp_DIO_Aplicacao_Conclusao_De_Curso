@@ -2,9 +2,9 @@
 
 namespace DIO_ByteBank.AccountCorrent
 {
-    internal class ToDepositValueInCurrentAccount
+    internal static class ToDepositValueInCurrentAccount
     {
-        public bool ToDepositValueInAccountCurrent(ClientAccountCurrent client, double value)
+        public static  bool ToDepositValueInAccountCurrent(ClientAccountCurrent client, double value)
         {
             if (value > 0)
             {

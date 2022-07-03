@@ -1,4 +1,7 @@
-﻿using System;
+﻿using DIO_ByteBank.AccountCorrent;
+using DIO_ByteBank.Interfaces;
+using DIO_ByteBank.UsersInterfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,7 +13,7 @@ namespace DIO_ByteBank
     {
         static void Main(string[] args)
         {
-
+            AdministrativeView.Menu();
         }
     }
 }

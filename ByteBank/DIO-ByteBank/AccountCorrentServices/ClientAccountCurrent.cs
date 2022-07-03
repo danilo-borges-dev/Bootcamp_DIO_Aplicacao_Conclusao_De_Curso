@@ -4,9 +4,10 @@
     {
         private AccountType AccountType { get; }
         private string _name;
-        private string _id;
         private double _balance;
         private double _credit;
+        private static int _idSystem;
+        private int _idClient;
         public double Balance
         {
             get { return _balance; }
@@ -16,13 +17,14 @@
             get { return _name; }
         }
 
-        public ClientAccountCurrent(AccountType accountType, string name, string id, double balance, double credit)
+        public ClientAccountCurrent(AccountType accountType, string name, double balance, double credit)
         {
             AccountType = accountType;
             _name = name;
-            _id = id;
             _balance = balance;
             _credit = credit;
+            _idSystem++;
+            _idClient = _idSystem;
         }
 
         public void SetNewBalance(double value) => _balance = value;
