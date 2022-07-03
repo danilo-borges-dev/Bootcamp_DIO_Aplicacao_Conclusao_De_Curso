@@ -54,11 +54,12 @@
     <Compile Include="AccountCorrentServices\TransferValueAccountCurrent.cs" />
     <Compile Include="UsersInterfaces\AdministrativeLoginView.cs" />
     <Compile Include="UsersInterfaces\AdministrativeView.cs" />
-    <Compile Include="UsersInterfaces\ClientList.cs" />
+    <Compile Include="UsersInterfaces\ClientListView.cs" />
     <Compile Include="UsersInterfaces\InitialInterfaceView.cs" />
     <Compile Include="UsersInterfaces\NewClientAccountView.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UsersInterfaces\TransferView.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

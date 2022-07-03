@@ -7,6 +7,11 @@ namespace DataList
     {
         static List<ClientAccountCurrent> listAccounts = new List<ClientAccountCurrent>();
 
+        public static List<ClientAccountCurrent> ListAccounts
+        {
+            get { return listAccounts; }
+        }
+
         public static bool AddNewClientAccount(AccountType type, string name, double balance, double credit)
         {
             ClientAccountCurrent newClient = new ClientAccountCurrent(type, name, balance, credit);

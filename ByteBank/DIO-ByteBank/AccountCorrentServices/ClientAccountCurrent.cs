@@ -17,6 +17,11 @@
             get { return _name; }
         }
 
+        public double Credit
+        {
+            get { return _credit;  }
+        }
+
         public ClientAccountCurrent(AccountType accountType, string name, double balance, double credit)
         {
             AccountType = accountType;

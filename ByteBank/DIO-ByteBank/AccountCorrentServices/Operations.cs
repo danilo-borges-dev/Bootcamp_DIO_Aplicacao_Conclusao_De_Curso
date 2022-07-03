@@ -1,5 +1,4 @@
-﻿using DIO_ByteBank.AccountCorrentServices;
-using DIO_ByteBank.Interfaces;
+﻿using DIO_ByteBank.Interfaces;
 using DIO_ByteBank.UsersInterfaces;
 using System;
 
@@ -14,13 +13,13 @@ namespace DIO_ByteBank.AccountCorrent
                 switch (option)
                 {
                     case "5":
-                        //listar Contas()
+                        ClientListView.ClientList();  // Lista os Clientes do Banco
                         break;
                     case "4":
                         NewClientAccountView.AddNewClientInterfaceView(); // Cadastrar novo Cliente
                         break;
                     case "1":
-                        // Tranferir()
+                        TransferView.Transfer(); // Tranferir valor entre contas
                         break;
                     case "2":
                         ToWithDraw.ToWithDrawValueInAccountCurrent(client, value);  // Sacar
@@ -29,13 +28,14 @@ namespace DIO_ByteBank.AccountCorrent
                         ToDepositValueInCurrentAccount.ToDepositValueInAccountCurrent(client, value);  // Depoistar
                         break;
                     case "6":
-                        AdministrativeLoginView.LoginView();
+                        AdministrativeLoginView.LoginView();  // Tela de Login de Usuário Adm
                         break;
                     case "7":
-                        // Acessar área de cliente
+                        InitialInterfaceView.Menu();  // Acessar área de cliente
                         break;
                     case "C":
                         Console.Clear();
+                        InitialInterfaceView.Menu();
                         break;
                     default:
                         throw new ArgumentOutOfRangeException();
