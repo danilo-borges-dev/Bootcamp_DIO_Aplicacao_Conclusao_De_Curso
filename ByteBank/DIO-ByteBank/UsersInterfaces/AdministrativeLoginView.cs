@@ -11,8 +11,10 @@ namespace DIO_ByteBank.UsersInterfaces
         {
             string login;
             string password;
+            bool res;
 
-            Console.WriteLine("\n\n   Você está Tentando Acessar a Aárea Administrativa - Necessário Realizar o Login de Autorização");
+            Console.WriteLine("\n\n   Você está Tentando Acessar a Aárea Administrativa");
+            Console.WriteLine("  Necessário Realizar o Login de Autorização");
             Console.Write("\n   Informe o Nome de usuário autorizado: ");
             Console.Write("\n   ");
             login = Console.ReadLine();
@@ -20,16 +22,23 @@ namespace DIO_ByteBank.UsersInterfaces
             Console.Write("\n   ");
             password = Console.ReadLine();
 
-            bool res = AdmLogin.ValidateLogin(login, password);
+            res = AdmLogin.ValidateLogin(login, password);
 
-            if (res)
+            do
             {
-                Console.WriteLine("Login Autorizado");
-            }
-            else
-            {
-                Console.WriteLine("Login Não Autorizado. Login ou Senha Incorretos");
-            }
+                if (res)
+                {
+                    Console.WriteLine("\nLogin Autorizado");
+                    Console.WriteLine("Tecle ENTER para continuar.");
+                    Console.ReadKey();
+                    Console.Clear();
+                }
+                else
+                {
+                    Console.WriteLine("Login Não Autorizado. Login ou Senha Incorretos");
+                }
+            } while (!res);
+            AdministrativeView.Menu();
         }
     }
 }

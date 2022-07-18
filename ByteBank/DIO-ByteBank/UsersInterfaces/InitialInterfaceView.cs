@@ -6,15 +6,17 @@ namespace DIO_ByteBank.Interfaces
 {
     internal static class InitialInterfaceView
     {
-        private static ClientAccountCurrent userControl = LoggedPerson.GetUser();
+        private static string _selection;
 
+        private static ClientAccountCurrent userControl = LoggedPerson.GetUser();
         private static string _userName = userControl.Name.ToString();
 
-        private static int _nCharName = _userName.Length;
-        
-        public static string Menu()
-        {          
 
+        public static object Accomplish { get; private set; }
+
+        public static string Menu()
+        {
+            _selection = " ";
             Console.WriteLine("\n+=============================================+");
             Console.WriteLine("|          Bem-vindo ao DIO ByteBank          |");
             Console.WriteLine("|   Informe a Opção Desejada e Tecle Enter    |");
@@ -32,10 +34,11 @@ namespace DIO_ByteBank.Interfaces
             Console.WriteLine("\n+=============================================+");
             Console.WriteLine("\n");
             Console.Write("   Opção: ");
-            string selection = Console.ReadLine().ToUpper();
+            _selection = Console.ReadLine().ToUpper();
             Console.WriteLine("\n");
             Console.Clear();
-            return selection;
+            Operations.Accomplish(_selection);
+            return _selection;
         }
     }
 }

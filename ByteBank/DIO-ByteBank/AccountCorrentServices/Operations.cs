@@ -39,7 +39,7 @@ namespace DIO_ByteBank.AccountCorrent
                         InitialInterfaceView.Menu();
                         break;
                     default:
-                        throw new ArgumentOutOfRangeException();
+                        throw new ArgumentOptionsViewException();
                 }
                 InitialInterfaceView.Menu(); // Volta para a tela inicial
             }

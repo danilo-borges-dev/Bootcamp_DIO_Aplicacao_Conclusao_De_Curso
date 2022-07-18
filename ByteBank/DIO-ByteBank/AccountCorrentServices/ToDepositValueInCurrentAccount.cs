@@ -6,7 +6,7 @@ namespace DIO_ByteBank.AccountCorrent
     {
         public static  bool ToDepositValueInAccountCurrent(ClientAccountCurrent client)
         {
-            Console.Write("\nInforme o Valor para Saque: ");
+            Console.Write("\nInforme o Valor para Depósito: ");
             double value = double.Parse(Console.ReadLine());
 
             if (value > 0)
@@ -17,9 +17,15 @@ namespace DIO_ByteBank.AccountCorrent
                 Console.WriteLine($"\nOperação de Depósito Realizado com Sucesso!\n" +
                     $"Nome do Cliente: {client.Name}\n" +
                     $"Valor atualizado na Conta R${client.Balance.ToString("C")}\n");
+                Console.WriteLine("Tecle ENTER para continuar...");
+                Console.ReadKey();
+                Console.Clear();
                 return true;
             }
             Console.WriteLine("Operação Negada!");
+            Console.WriteLine("Tecle ENTER para continuar...");
+            Console.ReadKey();
+            Console.Clear();
             return false;
         }
     }

@@ -14,9 +14,12 @@ namespace DIO_ByteBank.AccountCorrent
                 double accountBalance = client.Balance;
                 accountBalance -= value;
                 client.SetNewBalance(accountBalance);
-                Console.WriteLine($"Operação de Saque Realizada com Sucesso!\n" +
-                    $"Nome do Cliente: {client.Name}" +
-                    $"Valor atualizado na Conta R${client.Balance.ToString("C")}");
+                Console.WriteLine($" Operação de Saque Realizada com Sucesso!\n" +
+                    $" Nome do Cliente: {client.Name}\n" +
+                    $" Valor atualizado na Conta R${client.Balance.ToString("C")}\n");
+                Console.WriteLine(" Tecle ENTER para continuar..");
+                Console.ReadKey();
+                Console.Clear();
                 return true;
             }
             Console.WriteLine("Operação Negada.Saldo insuficiente!");

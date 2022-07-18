@@ -1,25 +1,37 @@
-﻿using System;
+﻿using DIO_ByteBank.AccountCorrent;
+using DIO_ByteBank.AccountCorrentServices;
+using System;
 
 namespace DIO_ByteBank.UsersInterfaces
 {
     internal static class AdministrativeView
     {
-        public static string Menu()
+        private static string _selection;
+
+        private static ClientAccountCurrent userControl = LoggedPerson.GetUser();
+        private static string _userName = userControl.Name.ToString();
+        public static void Menu()
         {
-            Console.WriteLine("\n\n\n             Bem-vindo ao DIO Bank Setor Administrativo");
-            Console.WriteLine("    Informe a Opção Desejada e Tecle Enter");
-
-            Console.WriteLine("\nOpções");
-            Console.WriteLine("  5 -  Listar Contas");
-            Console.WriteLine("  4 -  Inserir nova Conta");
-            Console.WriteLine("  7 -  Cliente Área"); // Volta para a área do cliente
-            Console.WriteLine("  L -  Limpas Tela");
-            Console.WriteLine("  S - Sair");
-            Console.WriteLine("\n\n");
-
-            string selection = Console.ReadLine().ToUpper().ToString();
+            Console.WriteLine("\n+=============================================+");
+            Console.WriteLine("|   Bem-vindo ao DIO ByteBank Administrativo  |");
+            Console.WriteLine("|   Informe a Opção Desejada e Tecle Enter    |");
+            Console.WriteLine("+=============================================+");
+            Console.WriteLine("|                                             |");
+            Console.WriteLine("| Opções                                      |");
+            Console.WriteLine("|  5 -  Listar Contas                         |");
+            Console.WriteLine("|  4 -  Inserir nova Conta                    |");
+            Console.WriteLine("|  7 -  Cliente Área                          |"); // Volta para a área do cliente
+            Console.WriteLine("|  L -  Limpas Tela                           |");
+            Console.WriteLine("|  S - Sair                                   |");
+            Console.WriteLine("+=============================================+");
+            Console.Write("  Usuário Logado: "); Console.Write($"{_userName}");
+            Console.WriteLine("\n+=============================================+");
             Console.WriteLine("\n");
-            return selection;
+            Console.Write("   Opção: ");
+            _selection = Console.ReadLine().ToUpper();
+            Console.WriteLine("\n");
+            Console.Clear();
+            Operations.Accomplish(_selection);
         }
     }
 }

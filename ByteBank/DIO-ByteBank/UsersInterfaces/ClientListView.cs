@@ -19,6 +19,9 @@ namespace DIO_ByteBank.UsersInterfaces
             }
 
             Console.WriteLine("   ---   Listagem de Clientes DIO ByteBank   ---   ");
+            Console.WriteLine("Tecle ENTER para continuar.");
+            Console.ReadKey();
+            Console.Clear();
         }
     }
 }
