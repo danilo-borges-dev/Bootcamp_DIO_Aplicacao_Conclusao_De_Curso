@@ -1,5 +1,7 @@
 ﻿using DIO_ByteBank.AccountCorrent;
 using DIO_ByteBank.Interfaces;
+using DIO_ByteBank.UsersInterfaces;
+using System;
 
 namespace DIO_ByteBank
 {
@@ -7,8 +9,24 @@ namespace DIO_ByteBank
     {
         static void Main(string[] args)
         {
-            NewClientAccountView.AddNewClientInterfaceView();
-            Operations.Accomplish(InitialInterfaceView.Menu());
+            try
+            {
+                NewClientAccountView.AddNewClientInterfaceView();
+                Operations.Accomplish(InitialInterfaceView.Menu());
+            }
+            catch (NullReferenceException)
+            {
+                ArgumentOptionsViewException.ArgumentExceptionView();
+            }
+            catch (ArgumentException)
+            {
+                ArgumentOptionsViewException.ArgumentExceptionView();
+            }
+            catch (Exception ex)
+            {
+                ArgumentOptionsViewException.ArgumentExceptionView();
+            }
+            InitialInterfaceView.Menu();
         }
     }
 }

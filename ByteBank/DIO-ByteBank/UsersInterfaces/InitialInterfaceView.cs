@@ -6,7 +6,8 @@ namespace DIO_ByteBank.Interfaces
 {
     internal static class InitialInterfaceView
     {
-        private static string _selection;
+        private static char _selection;
+        private static bool _aproved = true;
 
         private static ClientAccountCurrent userControl = LoggedPerson.GetUser();
         private static string _userName = userControl.Name.ToString();
@@ -14,13 +15,14 @@ namespace DIO_ByteBank.Interfaces
 
         public static object Accomplish { get; private set; }
 
-        public static string Menu()
+        public static char Menu()
         {
-            _selection = " ";
+            _selection = new char();
+            Console.WriteLine("\nTela Inical");
             Console.WriteLine("\n+=============================================+");
             Console.WriteLine("|          Bem-vindo ao DIO ByteBank          |");
             Console.WriteLine("|   Informe a Opção Desejada e Tecle Enter    |");
-            Console.WriteLine("+=============================================+");            
+            Console.WriteLine("+=============================================+");
             Console.WriteLine("|                                             |");
             Console.WriteLine("| Opções                                      |");
             Console.WriteLine("|  1 -  Transferir                            |");
@@ -34,10 +36,39 @@ namespace DIO_ByteBank.Interfaces
             Console.WriteLine("\n+=============================================+");
             Console.WriteLine("\n");
             Console.Write("   Opção: ");
-            _selection = Console.ReadLine().ToUpper();
-            Console.WriteLine("\n");
-            Console.Clear();
-            Operations.Accomplish(_selection);
+
+            ConsoleKeyInfo key = Console.ReadKey(true);
+            if (key.Key == ConsoleKey.L)
+            {
+                Console.Clear();
+                Menu();
+            }
+
+            _selection = key.KeyChar;
+            char c = _selection;            
+
+            if (c == 'S')
+            {
+                Environment.Exit(0);
+            }
+            do
+            {
+                if (_selection == '1' || _selection == '2' || _selection == '3' || _selection == '6' || _selection == 'L' || _selection == 'S')
+                {
+                    Console.WriteLine("\n");
+                    Console.Clear();
+                    Operations.Accomplish(_selection);
+                    _aproved = false;
+                }
+                else
+                {
+                    Console.WriteLine("\n\n Opção Inválida - Tente Novamente!");
+                    Console.ReadKey();
+                    Console.Clear();
+                    Menu();
+                }
+            } while (_aproved);
+
             return _selection;
         }
     }

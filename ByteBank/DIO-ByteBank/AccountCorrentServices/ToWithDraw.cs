@@ -1,10 +1,11 @@
-﻿using System;
+﻿using DIO_ByteBank.Interfaces;
+using System;
 
 namespace DIO_ByteBank.AccountCorrent
 {
     internal static class ToWithDraw
     {
-        public static bool ToWithDrawValueInAccountCurrent(ClientAccountCurrent client)
+        public static void ToWithDrawValueInAccountCurrent(ClientAccountCurrent client)
         {
             Console.Write("\nInforme o Valor para Saque: ");
             double value = double.Parse(Console.ReadLine());
@@ -20,10 +21,13 @@ namespace DIO_ByteBank.AccountCorrent
                 Console.WriteLine(" Tecle ENTER para continuar..");
                 Console.ReadKey();
                 Console.Clear();
-                return true;
+                InitialInterfaceView.Menu();
             }
-            Console.WriteLine("Operação Negada.Saldo insuficiente!");
-            return false;
+            Console.WriteLine(" Operação Negada.Saldo insuficiente!");
+            Console.WriteLine(" Tecle Enter para continuiar.");
+            Console.ReadLine();
+            Console.Clear();
+            InitialInterfaceView.Menu();
         }
     }
 }

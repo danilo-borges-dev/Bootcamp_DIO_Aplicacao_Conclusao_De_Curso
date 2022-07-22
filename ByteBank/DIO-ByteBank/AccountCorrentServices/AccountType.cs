@@ -2,7 +2,7 @@
 {
     internal enum AccountType
     {
-        PhysicalPerson = 1,
-        Legalperson = 2
+        Pessoa_Fisica = 1,
+        Pess_Juridica = 2
     }
 }

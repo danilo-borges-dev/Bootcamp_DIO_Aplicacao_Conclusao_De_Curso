@@ -53,10 +53,10 @@
     <Compile Include="AccountCorrentServices\ToDepositValueInCurrentAccount.cs" />
     <Compile Include="AccountCorrentServices\ToWithDraw.cs" />
     <Compile Include="AccountCorrentServices\TransferValueAccountCurrent.cs" />
+    <Compile Include="LoginView.cs" />
     <Compile Include="UsersInterfaces\AdministrativeLoginView.cs" />
     <Compile Include="UsersInterfaces\AdministrativeView.cs" />
     <Compile Include="UsersInterfaces\ArgumentOptionsViewException.cs" />
-    <Compile Include="UsersInterfaces\ClientAccount.cs" />
     <Compile Include="UsersInterfaces\ClientListView.cs" />
     <Compile Include="UsersInterfaces\InitialInterfaceView.cs" />
     <Compile Include="UsersInterfaces\NewClientAccountView.cs" />
