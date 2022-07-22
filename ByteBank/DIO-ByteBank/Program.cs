@@ -9,7 +9,6 @@ namespace DIO_ByteBank
     {
         static void Main(string[] args)
         {
-            TransferView.Transfer();
             try
             {
                 NewClientAccountView.AddNewClientInterfaceView();

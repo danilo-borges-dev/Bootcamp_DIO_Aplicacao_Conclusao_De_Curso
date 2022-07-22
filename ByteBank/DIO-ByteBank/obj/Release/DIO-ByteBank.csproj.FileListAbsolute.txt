@@ -1,0 +1,8 @@
+C:\Workspace\Bootcamp_DIO_Aplicacao_Conclusao_De_Curso\ByteBank\DIO-ByteBank\bin\Release\DIO-ByteBank.exe.config
+C:\Workspace\Bootcamp_DIO_Aplicacao_Conclusao_De_Curso\ByteBank\DIO-ByteBank\bin\Release\DIO-ByteBank.exe
+C:\Workspace\Bootcamp_DIO_Aplicacao_Conclusao_De_Curso\ByteBank\DIO-ByteBank\bin\Release\DIO-ByteBank.pdb
+C:\Workspace\Bootcamp_DIO_Aplicacao_Conclusao_De_Curso\ByteBank\DIO-ByteBank\obj\Release\DIO-ByteBank.csproj.AssemblyReference.cache
+C:\Workspace\Bootcamp_DIO_Aplicacao_Conclusao_De_Curso\ByteBank\DIO-ByteBank\obj\Release\DIO-ByteBank.csproj.SuggestedBindingRedirects.cache
+C:\Workspace\Bootcamp_DIO_Aplicacao_Conclusao_De_Curso\ByteBank\DIO-ByteBank\obj\Release\DIO-ByteBank.csproj.CoreCompileInputs.cache
+C:\Workspace\Bootcamp_DIO_Aplicacao_Conclusao_De_Curso\ByteBank\DIO-ByteBank\obj\Release\DIO-ByteBank.exe
+C:\Workspace\Bootcamp_DIO_Aplicacao_Conclusao_De_Curso\ByteBank\DIO-ByteBank\obj\Release\DIO-ByteBank.pdb
