@@ -15,10 +15,14 @@ namespace DIO_ByteBank.AccountCorrent
                 double accountBalance = client.Balance;
                 accountBalance += value;
                 client.SetNewBalance(accountBalance);
-                Console.WriteLine($"\nOperação de Depósito Realizado com Sucesso!\n" +
-                    $"Nome do Cliente: {client.Name}\n" +
-                    $"Valor atualizado na Conta R${client.Balance.ToString("C")}\n");
-                Console.WriteLine("Tecle ENTER para continuar...");
+                Console.WriteLine("\n\n+===========================================================+");
+                Console.WriteLine("| Operação de Depósito Realizado com Sucesso!               |");
+                Console.WriteLine("+===========================================================+");
+                Console.WriteLine($" Nome do Cliente: {client.Name}");
+                Console.WriteLine($" Valor atualizado na Conta R${client.Balance.ToString("C")}");
+                Console.WriteLine("+-----------------------------------------------------------+");
+
+                Console.WriteLine("\n Tecle ENTER para continuar...");
                 Console.ReadLine();
                 Console.Clear();
                 InitialInterfaceView.Menu();

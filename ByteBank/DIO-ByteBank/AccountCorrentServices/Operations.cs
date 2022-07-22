@@ -17,6 +17,7 @@ namespace DIO_ByteBank.AccountCorrent
                     break;
                 case '4':
                     NewClientAccountView.AddNewClientInterfaceView(); // Cadastrar novo Cliente
+                    AdministrativeView.Menu();
                     break;
                 case '1':
                     TransferView.Transfer(); // Tranferir valor entre contas

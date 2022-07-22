@@ -22,14 +22,20 @@ namespace DIO_ByteBank.UsersInterfaces
             Console.WriteLine("|  5 -  Listar Contas                         |");
             Console.WriteLine("|  4 -  Inserir nova Conta                    |");
             Console.WriteLine("|  7 -  Cliente Área                          |"); // Volta para a área do cliente
-            Console.WriteLine("|  L -  Limpar Tela                           |");
             Console.WriteLine("|  S -  Sair                                  |");
             Console.WriteLine("+=============================================+");
             Console.Write("  Usuário Logado: "); Console.Write($"{_userName}");
             Console.WriteLine("\n+=============================================+");
             Console.WriteLine("\n");
             Console.Write("   Opção: ");
-            _selection = char.Parse(Console.ReadLine().ToUpper());
+
+
+            ConsoleKeyInfo key = Console.ReadKey(true);
+            if (key.Key == ConsoleKey.S)
+            {
+                Environment.Exit(0);
+            }
+            _selection = key.KeyChar;
             Console.WriteLine("\n");
             Console.Clear();
             Operations.Accomplish(_selection);
